@@ -26,24 +26,25 @@ namespace TestDesktop
             richTextBox1.Text = result.ToString();
         }
 
-        private void cboOption_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEval_Click(object sender, EventArgs e)
         {
             string stringPolynomial = txtPoly.Text;
             string stringX = txtX.Text;
+            if (String.IsNullOrEmpty(stringX))
+                stringX = "0";
             double x = Convert.ToDouble(stringX);
             Polynomial polynomial = PolynomialParser.Parse(stringPolynomial);
-            string option = cboOption.Text;
+            string option = btnOptionForPoly.Text;
             Polynomial result = OptionExecuter.PolynomialExecuterByOption(polynomial, x, option);
 
-            richTextBox1.Text = result.ToString();
+            richTextBox2.Text = result.ToString();
         }
 
         private void lbX_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cboOption_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

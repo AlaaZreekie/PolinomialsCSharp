@@ -96,6 +96,8 @@ public class Polynomial
     //public event EventHandler TermAdded;
     public override string ToString()
     {
+        if (this.Terms is null || !Terms.Any())
+            return "0";
         string stringPolynomial = string.Empty;
 
         foreach (Term term in Terms)
@@ -104,11 +106,15 @@ public class Polynomial
         }
 
         stringPolynomial = stringPolynomial.Substring(0, stringPolynomial.Length - 2);
+        stringPolynomial = stringPolynomial.Replace("+ 0x^0", "");
         stringPolynomial = stringPolynomial.Replace("x^0", "");
         stringPolynomial = stringPolynomial.Replace("x^1", "x");
         stringPolynomial = stringPolynomial.Replace("1x", "x");
+        stringPolynomial = stringPolynomial.Replace("0 +", "");
 
 
+        if (string.IsNullOrEmpty(stringPolynomial))
+            return "0";
         return stringPolynomial;
     }
     public string ToString(IPolynomialWriter w)
@@ -185,10 +191,10 @@ public class Polynomial
     {
         Polynomial p = p1.Clone();
         Polynomial d = new Polynomial();
-        Term t2 = p2.GetTerm(p2.Degree);
+        Term t2 = p2.GetTerm(p2.Degree)!;
         while(p.Degree >= t2.Degree)
         {
-            Term t1 = p.GetTerm(p.Degree);
+            Term t1 = p.GetTerm(p.Degree)!;
             d.AddTerm(t1.Factor/t2.Factor, t1.Degree - t2.Degree);
             p = p1 - d*p2;
         }
@@ -199,7 +205,7 @@ public class Polynomial
         return p1 - (p1/p2)*p2;
     }
 
-    public void Organize(IComparer<Term> ic = null)
+    public void Organize(IComparer<Term> ic = null!)
     {
         if(ic is null)
         {

@@ -56,17 +56,55 @@ namespace TestDesktop
         {
             switch (option)
             {
-                case "D":
+                case "Evaluation":
                     {
-                        return p1;
+                        double answer = 0;
+                        Polynomial result = new Polynomial();
+                        answer = p1.Value(x);
+                        Term term = new Term(answer);
+                        result.AddTerm(term);
+                        return result;
                     }
-                case "P2":
+                case "Integration":
                     {
-                        return p2;
+                        if (p1 is null)
+                        {
+                            p1 = new Polynomial();
+                            p1.AddTerm(new Term(0)); 
+                        }
+                        Polynomial result = p1.Clone();
+
+                        foreach (Term term in result.Terms) 
+                        {
+                            term.Degree++;
+                            term.Factor = term.Factor/term.Degree;
+                        }
+
+                        return result;
                     }
-                case "-P1":
+                case "Derivation":
                     {
-                        return -p1;
+                        if (p1 is null)
+                        {
+                            p1 = new Polynomial();
+                            p1.AddTerm(new Term(0));
+                        }
+                        Polynomial result = p1.Clone();
+
+                        foreach (Term term in result.Terms)
+                        {
+                            if(term.Degree != 0)
+                            {
+                                term.Factor *= term.Degree;
+                                term.Degree -= 1;
+                            }
+                            else
+                            {
+                                term.Factor = 0;
+                            }
+                        }
+
+                        return result;
                     }
                 default:
                     {
@@ -75,4 +113,7 @@ namespace TestDesktop
             }
         }
     }
-}
+}/*
+Evaluation
+Integration
+Derivation*/
