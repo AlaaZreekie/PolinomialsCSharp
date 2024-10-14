@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComplexNumbers", "ComplexNumbers", "{476E726A-5855-442F-AB0C-345F4DCD0656}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexNumbers", "ComplexNumbers\ComplexNumbers\ComplexNumbers.csproj", "{1BA2F94F-968E-44DE-90A4-77E03F63C78B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polynomials", "Polynomials", "{A30C34D9-6E93-4F03-A4C5-B528B14BE8B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolynomialLibrary", "Polynomials\PolynomialLibrary\PolynomialLibrary.csproj", "{5FEDDDAE-7B35-4A24-924C-B0DC9CAEF1C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Polynomials\Test\Test.csproj", "{FD56242F-05A8-4369-8A8B-93AB223C86FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDesktop", "TestDesktop\TestDesktop.csproj", "{1C95AFF6-E9D4-4A17-A33F-D79B875269CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BA2F94F-968E-44DE-90A4-77E03F63C78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA2F94F-968E-44DE-90A4-77E03F63C78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA2F94F-968E-44DE-90A4-77E03F63C78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA2F94F-968E-44DE-90A4-77E03F63C78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEDDDAE-7B35-4A24-924C-B0DC9CAEF1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEDDDAE-7B35-4A24-924C-B0DC9CAEF1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEDDDAE-7B35-4A24-924C-B0DC9CAEF1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEDDDAE-7B35-4A24-924C-B0DC9CAEF1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD56242F-05A8-4369-8A8B-93AB223C86FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD56242F-05A8-4369-8A8B-93AB223C86FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD56242F-05A8-4369-8A8B-93AB223C86FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD56242F-05A8-4369-8A8B-93AB223C86FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C95AFF6-E9D4-4A17-A33F-D79B875269CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C95AFF6-E9D4-4A17-A33F-D79B875269CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C95AFF6-E9D4-4A17-A33F-D79B875269CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C95AFF6-E9D4-4A17-A33F-D79B875269CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BA2F94F-968E-44DE-90A4-77E03F63C78B} = {476E726A-5855-442F-AB0C-345F4DCD0656}
+		{5FEDDDAE-7B35-4A24-924C-B0DC9CAEF1C2} = {A30C34D9-6E93-4F03-A4C5-B528B14BE8B2}
+		{FD56242F-05A8-4369-8A8B-93AB223C86FC} = {A30C34D9-6E93-4F03-A4C5-B528B14BE8B2}
+		{1C95AFF6-E9D4-4A17-A33F-D79B875269CF} = {A30C34D9-6E93-4F03-A4C5-B528B14BE8B2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E793AD3C-833A-4703-AB9F-E01060F2D407}
+	EndGlobalSection
+EndGlobal
