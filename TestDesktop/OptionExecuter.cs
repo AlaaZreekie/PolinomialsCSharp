@@ -5,6 +5,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+//using MathNet.Numerics.RootFinding;
+
 
 namespace TestDesktop
 {
